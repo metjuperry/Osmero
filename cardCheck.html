@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card checker</title>
+    <script src="calculation.js"></script>
+</head>
+
+<body>
+    <div>
+        <img id="cardImage" src="cards/1.png" alt="Card Image" style="width: 100%; max-width: 300px;">
+        <div id="cardData" style="font-size: 24px; font-weight: bold; max-width: 50%;"></div>
+        <script type="text/javascript">
+
+        </script>
+
+
+        <div>
+            <button onclick="changeImage(-1)">Previous</button>
+            <button onclick="changeImage(1)">Next</button>
+            <button onclick="markAsWrong()">Mark as wrong</button>
+            <script type="text/javascript">
+                function markAsWrong() {
+                    console.log(`Current index: ${currentImage}`);
+                }
+            </script>
+        </div>
+    </div>
+    <script type="text/javascript">
+        let currentImage = 1;
+
+        function changeImage(direction) {
+            currentImage += direction;
+            if (currentImage < 1) {
+                currentImage = 1;
+            }
+            if (currentImage > 68) {
+                currentImage = 68;
+            }
+            document.getElementById('cardImage').src = `cards/${currentImage}.png`;
+        }
+
+        function updateCardData() {
+            const cardData = cardsData[currentImage - 1];
+            cardData["GetPoints"] = cardData.GetPoints.toString();
+            document.getElementById('cardData').innerText = JSON.stringify(cardData);
+        }
+
+        // Update card data on initial load
+        updateCardData();
+
+        // Update card data whenever the image changes
+        function changeImage(direction) {
+            currentImage += direction;
+            if (currentImage < 1) {
+                currentImage = 1;
+            }
+            if (currentImage > 68) {
+                currentImage = 68;
+            }
+            document.getElementById('cardImage').src = `cards/${currentImage}.png`;
+            updateCardData();
+        }
+    </script>
+</body>
+
+<body>
+    <div>
+
+    </div>
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

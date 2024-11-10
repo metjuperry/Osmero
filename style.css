@@ -1,0 +1,484 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-container {
+    padding: 20px;
+}
+
+.inputs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    /* Stack input and error message */
+    align-items: center;
+    /* Center items horizontally */
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    /* Space for the button below */
+    perspective: 1000px;
+}
+
+.number-input {
+    font-size: 2rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    background: transparent;
+    transition: background-color 0.5s ease;
+}
+
+.input-box .number-input:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+    background-image: url('cards/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+}
+
+.close-btn {
+    display: none;
+    /* Initially hidden, shown when a box is filled */
+    margin-top: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 50%;
+    /* Make it circular */
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    /* Center the "x" vertically */
+    transition: background-color 0.3s;
+}
+
+
+.close-btn:hover {
+    background-color: darkred;
+    /* Darker red on hover */
+}
+
+input.filled {
+    display: none;
+}
+
+input.filled+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.calculate-btn {
+    background-color: #6200ea;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-end;
+}
+
+.input-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Ensures the image fits without distortion */
+    border-radius: 15px;
+    /* Same as the box for a rounded look */
+}
+
+.number-image {
+    display: none;
+    /* Initially hidden until a number is entered */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Fit image within the box */
+    border-radius: 15px;
+    /* Same as the box for a rounded look */
+}
+
+.calculate-btn:hover {
+    background-color: #3700b3;
+}
+
+.calculate-btn:disabled {
+    background-color: #bdbdbd;
+    cursor: not-allowed;
+}
+
+/* Style for the toast notification */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Flashing red effect for the duplicate input box */
+.flash-red {
+    animation: flash 0.5s ease-in-out 1;
+}
+
+.flip-animation {
+    animation: flip-card 0.8s ease-in-out forwards;
+}
+
+/* Flip animation */
+@keyframes flip-card {
+    0% {
+        transform: rotateY(0);
+        background-color: #f0f0f0;
+        cursor: not-allowed;
+        background-image: url('cards/background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: rotateY(90deg);
+        cursor: not-allowed;
+        background-image: url('cards/background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.6;
+        /* Mid-point where it's fully flipped */
+    }
+
+    51% {
+        background-image: none;
+        opacity: 1;
+        /* Show the number */
+    }
+
+    100% {
+        transform: rotateY(0);
+        /* Return to original position */
+    }
+}
+
+@keyframes flash {
+
+    0%,
+    100% {
+        background-color: #ffffff;
+    }
+
+    50% {
+        background-color: #ffcccc;
+    }
+}
+
+/* Light red flash */
+/* Media queries for responsiveness */
+@media (min-width: 600px) {
+    .inputs {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 768px) {
+    .input-box {
+        width: 150px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .input-box {
+        width: 200px;
+    }
+}
+
+
+
+.section-monuments,
+.section-numbers {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    /* Space between sections */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Titles for Sections */
+.section-monuments h2,
+.section-numbers h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Monument container to stack cards */
+.monuments-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.monument-card {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: opacity 0.2s ease, max-height 0.2s ease, visibility 0s 0.2s, margin-bottom 0.2s ease;
+}
+
+/* Monument Card */
+.monument-card.visible {
+    width: 150px;
+    height: 200px;
+    max-height: 100%;
+    opacity: 1;
+    visibility: visible;
+    background-color: #f0f0f0;
+    border: 2px dashed #ccc;
+    border-radius: 15px;
+    position: relative;
+    margin-bottom: 20px;
+    background-image: url('monuments/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.monument-card img {
+    width: 150px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.monument-card.filled {
+    cursor: auto;
+    border: none;
+    background-color: #ffffff;
+    background-image: none;
+}
+
+/* Result number container under each input box */
+.result-number-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Individual number result styling */
+.result-number {
+    font-size: 1.5rem;
+    color: #333;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Show class to trigger animation */
+.result-number.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Total points container */
+.total-points {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Total points display animation */
+.total-points-display {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.total-points-display.show-total {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* Monument card styles */
+.monument-box-wrapper {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    width: 100px;
+}
+
+.monument-box {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.monument-placeholder {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* Hide input box by default */
+.monument-input {
+    display: none;
+}
+
+/* Horizontal scrollable gallery */
+.monument-gallery {
+    /* Limit gallery width */
+    white-space: nowrap;
+    align-content: center;
+    /* Hidden initially */
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.monument-gallery-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.monument-gallery img {
+    width: 150px;
+    height: 200px;
+    margin: 20px;
+
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.monument-gallery img.used {
+    cursor: auto;
+
+    opacity: 0.6;
+}
+
+.monument-gallery img:hover {
+    margin-top: 20px;
+    margin-left: 20px;
+    transform: scale(1.1);
+    /* Zoom on hover */
+}
+
+.monument-gallery img.used:hover {
+    margin-top: 20px;
+    margin-left: 20px;
+    transform: scale(1);
+}
+
+.monument-color-selector {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 0px;
+    gap: 20px;
+    transition: opacity 0.2s ease, max-height 0.2s ease, visibility 0s 0.2s, margin-bottom 0.2s ease;
+}
+
+.monument-color-selector.visible {
+    opacity: 1;
+    max-height: 100%;
+    margin-bottom: 10px;
+    visibility: visible;
+    transition: opacity 0.5s ease, max-height 0.5s ease, visibility 0s 0s, margin-bottom 0.5s ease;
+}
+
+
+.monument-galleries {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.monument-color-selector img {
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.monument-color-selector img:hover {
+    transform: scale(1.1);
+    /* Zoom on hover */
+}
+
+.monument-gallery.hidden {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: opacity 0.2s ease, max-height 0.2s ease, visibility 0s 0.2s, margin-bottom 0.2s ease;
+}
+
+.monument-gallery.visible {
+    opacity: 1;
+    max-height: fit-content;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+
+    visibility: visible;
+    transition: opacity 0.5s ease, max-height 0.5s ease, visibility 0s 0s, margin-bottom 0.5s ease;
+}

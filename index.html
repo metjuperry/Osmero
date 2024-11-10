@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Input to Image UI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="calculation.js"></script>
+    <script src="cards.js"></script>
+    <script src="monuments.js"></script>
+
+</head>
+
+<body>
+    <div class="card-container">
+        <div class="monuments-container" id="monuments-container">
+            <div>
+                <div class="monument-card" id="monument1" onclick="selectMonument(1)">
+                    <input type="text" maxlength="2" class="monument-input" id="monument-input-1">
+                </div>
+                <div class="result-number-container" id="result-monument-1"></div>
+            </div>
+
+            <div>
+                <div class="monument-card" id="monument2" onclick="selectMonument(2)">
+                    <input type="text" maxlength="2" class="monument-input" id="monument-input-2">
+                </div>
+                <div class="result-number-container" id="result-monument-2"></div>
+            </div>
+
+            <div>
+                <div class="monument-card" id="monument3" onclick="selectMonument(3)">
+                    <input type="text" maxlength="2" class="monument-input" id="monument-input-3">
+                </div>
+                <div class="result-number-container" id="result-monument-3"></div>
+            </div>
+
+            <div>
+                <div class="monument-card" id="monument4" onclick="selectMonument(4)">
+                    <input type="text" maxlength="2" class="monument-input" id="monument-input-4">
+                </div>
+                <div class="result-number-container" id="result-monument-4"></div>
+            </div>
+
+            <div>
+                <div class="monument-card" id="monument5" onclick="selectMonument(5)">
+                    <input type="text" maxlength="2" class="monument-input" id="monument-input-5">
+                </div>
+                <div class="result-number-container" id="result-monument-5"></div>
+            </div>
+
+            <div>
+                <div class="monument-card" id="monument6" onclick="selectMonument(6)">
+                    <input type="text" maxlength="2" class="monument-input" id="monument-input-6">
+                </div>
+                <div class="result-number-container" id="result-monument-6"></div>
+            </div>
+
+            <div>
+                <div class="monument-card" id="monument7" onclick="selectMonument(7)">
+                    <input type="text" maxlength="2" class="monument-input" id="monument-input-7">
+                </div>
+                <div class="result-number-container" id="result-monument-7"></div>
+            </div>
+
+            <div>
+                <div class="monument-card" id="monument8" onclick="selectMonument(8)">
+                    <input type="text" maxlength="2" class="monument-input" id="monument-input-8">
+                </div>
+                <div class="result-number-container" id="result-monument-8"></div>
+            </div>
+
+        </div>
+
+        <div class="monument-color-selector" id="monument-color-selector">
+            <img src="ui/blueTile.png" class="color-selector" id="blueTile" onclick="changeMonumentPickedColor('blue')">
+            <img src="ui/greenTile.png" class="color-selector" id="greenTile"
+                onclick="changeMonumentPickedColor('green')">
+            <img src="ui/redTile.png" class="color-selector" id="redTile" onclick="changeMonumentPickedColor('red')">
+            <img src="ui/yellowTile.png" class="color-selector" id="yellowTile"
+                onclick="changeMonumentPickedColor('yellow')">
+            <img src="ui/greyTile.png" class="color-selector" id="purpleTile"
+                onclick="changeMonumentPickedColor('grey')">
+        </div>
+
+        <div class="monument-gallery" id="grey-monument-gallery">
+            <div class="previous-page-button" id="previous-page-button">
+                <button onclick="greyGalleryPreviousPage()">Previous Page</button>
+            </div>
+
+            <div class="monument-gallery-row" id="gray-monument-gallery-row-1">
+                <img src="monuments/1.png" alt=1 id="monument-image-1" onclick="fillMonument(1)">
+                <img src="monuments/2.png" alt=2 id="monument-image-2" onclick="fillMonument(2)">
+                <img src="monuments/3.png" alt=3 id="monument-image-3" onclick="fillMonument(3)">
+                <img src="monuments/4.png" alt=4 id="monument-image-4" onclick="fillMonument(4)">
+                <img src="monuments/5.png" alt=5 id="monument-image-5" onclick="fillMonument(5)">
+            </div>
+
+            <div class="monument-gallery-row" id="gray-monument-gallery-row-2">
+                <img src="monuments/6.png" alt=6 id="monument-image-6" onclick="fillMonument(6)">
+                <img src="monuments/7.png" alt=7 id="monument-image-7" onclick="fillMonument(7)">
+                <img src="monuments/8.png" alt=8 id="monument-image-8" onclick="fillMonument(8)">
+                <img src="monuments/9.png" alt=9 id="monument-image-9" onclick="fillMonument(9)">
+                <img src="monuments/10.png" alt=10 id="monument-image-10" onclick="fillMonument(10)">
+            </div>
+
+            <div class="monument-gallery-row" id="gray-monument-gallery-row-3">
+                <img src="monuments/11.png" alt=11 id="monument-image-11" onclick="fillMonument(11)">
+                <img src="monuments/12.png" alt=12 id="monument-image-12" onclick="fillMonument(12)">
+                <img src="monuments/13.png" alt=13 id="monument-image-13" onclick="fillMonument(13)">
+                <img src="monuments/14.png" alt=14 id="monument-image-14" onclick="fillMonument(14)">
+                <img src="monuments/15.png" alt=15 id="monument-image-15" onclick="fillMonument(15)">
+            </div>
+
+            <div class="monument-gallery-row" id="gray-monument-gallery-row-4">
+                <img src="monuments/16.png" alt=16 id="monument-image-16" onclick="fillMonument(16)">
+                <img src="monuments/17.png" alt=17 id="monument-image-17" onclick="fillMonument(17)">
+                <img src="monuments/18.png" alt=18 id="monument-image-18" onclick="fillMonument(18)">
+                <img src="monuments/19.png" alt=19 id="monument-image-19" onclick="fillMonument(19)">
+                <img src="monuments/20.png" alt=20 id="monument-image-20" onclick="fillMonument(20)">
+            </div>
+
+            <div class="monument-gallery-row" id="gray-monument-gallery-row-5">
+                <img src="monuments/21.png" alt=21 id="monument-image-21" onclick="fillMonument(21)">
+                <img src="monuments/22.png" alt=22 id="monument-image-22" onclick="fillMonument(22)">
+                <img src="monuments/23.png" alt=23 id="monument-image-23" onclick="fillMonument(23)">
+                <img src="monuments/24.png" alt=24 id="monument-image-24" onclick="fillMonument(24)">
+                <img src="monuments/25.png" alt=25 id="monument-image-25" onclick="fillMonument(25)">
+            </div>
+
+            <div class="next-page-button" id="next-page-button">
+                <button onclick="greyGalleryNextPage()">Next Page</button>
+            </div>
+        </div>
+
+        <div class="monument-gallery" id="red-monument-gallery">
+            <div class="monument-gallery-row">
+                <img src="monuments/26.png" alt=26 id="monument-image-26" onclick="fillMonument(26)">
+                <img src="monuments/27.png" alt=27 id="monument-image-27" onclick="fillMonument(27)">
+                <img src="monuments/28.png" alt=28 id="monument-image-28" onclick="fillMonument(28)">
+                <img src="monuments/29.png" alt=29 id="monument-image-29" onclick="fillMonument(29)">
+                <img src="monuments/30.png" alt=30 id="monument-image-30" onclick="fillMonument(30)">
+            </div>
+        </div>
+
+        <div class="monument-gallery" id="green-monument-gallery">
+            <div class="monument-gallery-row">
+                <img src="monuments/31.png" alt=31 id="monument-image-31" onclick="fillMonument(31)">
+                <img src="monuments/32.png" alt=32 id="monument-image-32" onclick="fillMonument(32)">
+                <img src="monuments/33.png" alt=33 id="monument-image-33" onclick="fillMonument(33)">
+                <img src="monuments/34.png" alt=34 id="monument-image-34" onclick="fillMonument(34)">
+                <img src="monuments/35.png" alt=35 id="monument-image-35" onclick="fillMonument(35)">
+            </div>
+        </div>
+
+        <div class="monument-gallery" id="blue-monument-gallery">
+            <div class="monument-gallery-row">
+                <img src="monuments/36.png" alt=36 id="monument-image-36" onclick="fillMonument(36)">
+                <img src="monuments/37.png" alt=37 id="monument-image-37" onclick="fillMonument(37)">
+                <img src="monuments/38.png" alt=38 id="monument-image-38" onclick="fillMonument(38)">
+                <img src="monuments/39.png" alt=39 id="monument-image-39" onclick="fillMonument(39)">
+                <img src="monuments/40.png" alt=40 id="monument-image-40" onclick="fillMonument(40)">
+            </div>
+        </div>
+
+        <div class="monument-gallery" id="yellow-monument-gallery">
+            <div class="monument-gallery-row">
+                <img src="monuments/41.png" alt=41 id="monument-image-41" onclick="fillMonument(41)">
+                <img src="monuments/42.png" alt=42 id="monument-image-42" onclick="fillMonument(42)">
+                <img src="monuments/43.png" alt=43 id="monument-image-43" onclick="fillMonument(43)">
+                <img src="monuments/44.png" alt=44 id="monument-image-44" onclick="fillMonument(44)">
+                <img src="monuments/45.png" alt=45 id="monument-image-45" onclick="fillMonument(45)">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="inputs">
+                <div class="input-box" id="box1">
+                    <input type="text" maxlength="2" class="number-input" id="input1" onblur="handleInput(1)"
+                        onclick="selectMonument(0)">
+                    <span class="close-btn" id="close-btn1" onclick="resetInput(1)">x</span>
+                    <div class="result-number-container" id="result1"></div>
+                </div>
+
+
+                <div class="input-box" id="box2">
+                    <input type="text" maxlength="2" class="number-input" id="input2" onblur="handleInput(2)"
+                        onclick="selectMonument(0)">
+                    <span class="close-btn" onclick="resetInput(2)">x</span>
+                    <div class="result-number-container" id="result2"></div>
+                </div>
+
+                <div class="input-box" id="box3">
+                    <input type="text" maxlength="2" class="number-input" id="input3" onblur="handleInput(3)"
+                        onclick="selectMonument(0)">
+                    <span class="close-btn" onclick="resetInput(3)">x</span>
+                    <div class="result-number-container" id="result3"></div>
+                </div>
+
+                <div class="input-box" id="box4">
+                    <input type="text" maxlength="2" class="number-input" id="input4" onblur="handleInput(4)"
+                        onclick="selectMonument(0)">
+                    <span class="close-btn" onclick="resetInput(4)">x</span>
+                    <div class="result-number-container" id="result4"></div>
+                </div>
+
+                <div class="input-box" id="box5">
+                    <input type="text" maxlength="2" class="number-input" id="input5" onblur="handleInput(5)"
+                        onclick="selectMonument(0)">
+                    <span class="close-btn" onclick="resetInput(5)">x</span>
+                    <div class="result-number-container" id="result5"></div>
+                </div>
+
+                <div class="input-box" id="box6">
+                    <input type="text" maxlength="2" class="number-input" id="input6" onblur="handleInput(6)"
+                        onclick="selectMonument(0)">
+                    <span class="close-btn" onclick="resetInput(6)">x</span>
+                    <div class="result-number-container" id="result6"></div>
+                </div>
+
+                <div class="input-box" id="box7">
+                    <input type="text" maxlength="2" class="number-input" id="input7" onblur="handleInput(7)"
+                        onclick="selectMonument(0)">
+                    <span class="close-btn" onclick="resetInput(7)">x</span>
+                    <div class="result-number-container" id="result7"></div>
+                </div>
+
+                <div class="input-box" id="box8">
+                    <input type="text" maxlength="2" class="number-input" id="input8" onblur="handleInput(8)"
+                        onclick="selectMonument(0)">
+                    <span class="close-btn" onclick="resetInput(8)">x</span>
+                    <div class="result-number-container" id="result8"></div>
+                </div>
+
+            </div>
+            <button class="calculate-btn" disabled onclick="calculate()">Calculate</button>
+            <div id="total-points" class="total-points"></div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+</body>
+
+</html>

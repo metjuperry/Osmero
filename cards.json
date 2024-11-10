@@ -1,0 +1,306 @@
+[
+    {
+        "CardNumber": 1,
+        "TypeOfDay": "Day",
+        "CardColor": "Red",
+        "HasMap": false,
+        "Produces": [
+            "Azure",
+            "GoatHead"
+        ],
+        "PointCost": {}
+    },
+    {
+        "CardNumber": 2,
+        "TypeOfDay": "Day",
+        "CardColor": "Blue",
+        "HasMap": false,
+        "Produces": [
+            "Azure",
+            "Azure"
+        ],
+        "PointCost": {}
+    },
+    {
+        "CardNumber": 3,
+        "TypeOfDay": "Day",
+        "CardColor": "Green",
+        "HasMap": false,
+        "Produces": [],
+        "PointCost": {}
+    },
+    {
+        "CardNumber": 4,
+        "TypeOfDay": "Day",
+        "CardColor": "Red",
+        "HasMap": false,
+        "Produces": [
+            "Pineapple",
+            "Azure"
+        ],
+        "PointCost": {}
+    },
+    {
+        "CardNumber": 5,
+        "TypeOfDay": "Day",
+        "CardColor": "Red",
+        "HasMap": false,
+        "Produces": [
+            "GoatHead"
+        ],
+        "PointCost": {}
+    },
+    {
+        "CardNumber": 6,
+        "TypeOfDay": "Day",
+        "CardColor": "Blue",
+        "HasMap": true,
+        "Produces": [
+            "Azure"
+        ],
+        "PointCost": {}
+    },
+    {
+        "CardNumber": 7,
+        "TypeOfDay": "Day",
+        "CardColor": "Red",
+        "HasMap": false,
+        "Produces": [
+            "GoatHead",
+            "Pineapple"
+        ],
+        "PointCost": {}
+    },
+    {
+        "CardNumber": 8,
+        "TypeOfDay": "Day",
+        "CardColor": "Red",
+        "HasMap": true,
+        "Produces": [
+            "GoatHead"
+        ],
+        "PointCost": {}
+    },
+    {
+        "CardNumber": 9,
+        "TypeOfDay": "Day",
+        "CardColor": "Blue",
+        "HasMap": false,
+        "Produces": [],
+        "PointCost": {}
+    },
+    {
+        "CardNumber": 10,
+        "TypeOfDay": "Day",
+        "CardColor": "Red",
+        "HasMap": false,
+        "Produces": [],
+        "PointCost": {}
+    },
+    {
+        "CardNumber": 21,
+        "TypeOfDay": "Night",
+        "CardColor": "Blue",
+        "HasMap": false,
+        "Produces": [],
+        "PointCost": {
+            "Azure": 2
+        }
+    },
+    {
+        "CardNumber": 22,
+        "TypeOfDay": "Night",
+        "CardColor": "Green",
+        "HasMap": true,
+        "Produces": [],
+        "PointCost": {}
+    },
+    {
+        "CardNumber": 23,
+        "TypeOfDay": "Night",
+        "CardColor": "Red",
+        "HasMap": false,
+        "Produces": [
+            "Azure",
+            "GoatHead"
+        ],
+        "PointCost": {}
+    },
+    {
+        "CardNumber": 24,
+        "TypeOfDay": "Night",
+        "CardColor": "Blue",
+        "HasMap": false,
+        "Produces": [
+            "Azure"
+        ],
+        "PointCost": {
+            "GoatHead": 1
+        }
+    },
+    {
+        "CardNumber": 25,
+        "TypeOfDay": "Night",
+        "CardColor": "Yellow",
+        "HasMap": false,
+        "Produces": [],
+        "PointCost": {}
+    },
+    {
+        "CardNumber": 26,
+        "TypeOfDay": "Night",
+        "CardColor": "Red",
+        "HasMap": false,
+        "Produces": [
+            "GoatHead"
+        ],
+        "PointCost": {}
+    },
+    {
+        "CardNumber": 27,
+        "TypeOfDay": "Night",
+        "CardColor": "Yellow",
+        "HasMap": false,
+        "Produces": [],
+        "PointCost": {}
+    },
+    {
+        "CardNumber": 28,
+        "TypeOfDay": "Night",
+        "CardColor": "Red",
+        "HasMap": false,
+        "Produces": [
+            "Azure"
+        ],
+        "PointCost": {}
+    },
+    {
+        "CardNumber": 29,
+        "TypeOfDay": "Night",
+        "CardColor": "Yellow",
+        "HasMap": false,
+        "Produces": [
+            "Pineapple"
+        ],
+        "PointCost": {}
+    },
+    {
+        "CardNumber": 30,
+        "TypeOfDay": "Night",
+        "CardColor": "Red",
+        "HasMap": false,
+        "Produces": [
+            "Azure"
+        ],
+        "PointCost": {}
+    },
+    {
+        "CardNumber": 31,
+        "TypeOfDay": "Night",
+        "CardColor": "Yellow",
+        "HasMap": false,
+        "Produces": [],
+        "PointCost": {}
+    },
+    {
+        "CardNumber": 32,
+        "TypeOfDay": "Night",
+        "CardColor": "Yellow",
+        "HasMap": false,
+        "Produces": [
+            "GoatHead",
+            "Azure"
+        ],
+        "PointCost": {
+            "Azure": 3
+        }
+    },
+    {
+        "CardNumber": 33,
+        "TypeOfDay": "Night",
+        "CardColor": "Yellow",
+        "HasMap": true,
+        "Produces": [],
+        "PointCost": {}
+    },
+    {
+        "CardNumber": 34,
+        "TypeOfDay": "Night",
+        "CardColor": "Green",
+        "HasMap": false,
+        "Produces": [
+            "GoatHead"
+        ],
+        "PointCost": {
+            "Azure": 2
+        }
+    },
+    {
+        "CardNumber": 35,
+        "TypeOfDay": "Night",
+        "CardColor": "Yellow",
+        "HasMap": false,
+        "Produces": [
+            "GoatHead"
+        ],
+        "PointCost": {}
+    },
+    {
+        "CardNumber": 36,
+        "TypeOfDay": "Night",
+        "CardColor": "Red",
+        "HasMap": false,
+        "Produces": [],
+        "PointCost": {
+            "GoatHead": 2
+        }
+    },
+    {
+        "CardNumber": 37,
+        "TypeOfDay": "Night",
+        "CardColor": "Yellow",
+        "HasMap": false,
+        "Produces": [],
+        "PointCost": {
+            "Pineapple": 1
+        }
+    },
+    {
+        "CardNumber": 38,
+        "TypeOfDay": "Night",
+        "CardColor": "Green",
+        "HasMap": false,
+        "Produces": [
+            "Azure"
+        ],
+        "PointCost": {
+            "Pineapple": 1,
+            "GoatHead": 1
+        }
+    },
+    {
+        "CardNumber": 39,
+        "TypeOfDay": "Night",
+        "CardColor": "Red",
+        "HasMap": false,
+        "Produces": [
+            "Azure",
+            "Pineapple"
+        ],
+        "PointCost": {
+            "GoatHead": 2
+        }
+    },
+    {
+        "CardNumber": 40,
+        "TypeOfDay": "Night",
+        "CardColor": "Blue",
+        "HasMap": false,
+        "Produces": [],
+        "PointCost": {
+            "Pineapple": 1,
+            "Azure": 1,
+            "GoatHead": 1
+        }
+    }
+]
