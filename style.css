@@ -2,7 +2,7 @@ body,
 html {
     margin: 0;
     padding: 0;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -214,11 +214,15 @@ input.filled+img {
     }
 }
 
-/* Light red flash */
 /* Media queries for responsiveness */
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .inputs {
         flex-direction: row;
+    }
+
+    html,
+    body {
+        display: flex;
     }
 }
 
@@ -259,7 +263,6 @@ input.filled+img {
 /* Monument container to stack cards */
 .monuments-container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -450,6 +453,10 @@ input.filled+img {
     flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 20px;
+}
+
+.monument-gallery-row {
+    overflow-y: auto;
 }
 
 .monument-color-selector img {
